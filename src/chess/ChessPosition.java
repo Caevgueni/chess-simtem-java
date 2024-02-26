@@ -1,9 +1,10 @@
 package chess;
 
-import boardgame.Poisition;
+import boardgame.Position;
 
 public class ChessPosition {
 	private char column;
+	
 	private int row;
 	public ChessPosition(char column, int row) {
 		if (column <'a' || column>'h'  || row <1 || row>8) {
@@ -24,10 +25,10 @@ public class ChessPosition {
 		return row;
 	}
 	
-	protected Poisition toPosition() {
-	 return new Poisition(8 - row, column -'a');
+	protected Position toPosition() {
+	 return new Position(8 - row, column -'a');
 	}
-	protected static ChessPosition formPosition(Poisition position) {
+	protected static ChessPosition formPosition(Position position) {
 	return new ChessPosition((char)('a'- position.getColumn()), 8- position.getRow());
 	
 	

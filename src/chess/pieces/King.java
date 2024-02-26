@@ -6,8 +6,8 @@ import chess.Color;
 
 public class King extends ChessPiece{
 
-	public King(Board boar, Color color) {
-		super(boar, color);
+	public King(Board board, Color color) {
+		super(board, color);
 		
 	}
 	
@@ -20,7 +20,7 @@ public class King extends ChessPiece{
 
 	@Override
 	public boolean[][] possibleMoves() {
-		boolean[][] mat = new boolean[getBoar().getRows()][getBoar().getColumns()]; 
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()]; 
 		return mat;
 	}
 

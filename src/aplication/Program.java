@@ -13,9 +13,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-	
-		//Board board = new Board(8,8); 
-		
+		//Board board = new Board(8,8); 	
 		ChessMatch chessMatch = new ChessMatch();
 		
 		while (true) {
@@ -30,7 +28,7 @@ public class Program {
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
-				 ChessPiece capturedPiece= chessMatch.performachessMove(source, target );
+				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 			}
 			
 			catch ( ChessException e) {
@@ -40,11 +38,7 @@ public class Program {
 			catch (InputMismatchException e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
-			}
-			
-			
-		}
-		
+			}				
+		}		
 	}
-
 }
